@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #3C3C3C;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <TextField fx:id="searchField" maxWidth="300.0" minWidth="100.0">
+               <font>
+                  <Font size="21.0" />
+               </font></TextField>
+            <Button fx:id="scrapeButton" mnemonicParsing="false" onAction="#showResults" prefHeight="45.0" prefWidth="52.0" text="Scrape">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin></Button>
+            <Label fx:id="numberOfThreads" textFill="RED">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label text="Alege Marime:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <ChoiceBox fx:id="marimeList" prefHeight="40.0" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></ChoiceBox>
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <ChoiceBox fx:id="ordonareList" prefHeight="40.0" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin></ChoiceBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox fx:id="HBoxItems">
+         <children>
+            <VBox fx:id="VBoxItems">
+               <children>
+                  <CheckBox fx:id="footShopCheck" mnemonicParsing="false" text="FootShop" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font></CheckBox>
+                  <CheckBox fx:id="zaalandoCheck" mnemonicParsing="false" text="Zaalando" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding></CheckBox>
+                  <CheckBox fx:id="sizeerCheck" mnemonicParsing="false" text="Sizeer" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </CheckBox>
+                  <CheckBox fx:id="answearCheck" mnemonicParsing="false" text="Answear" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </VBox>
+            <ScrollPane fx:id="scrollPaneParent" fitToWidth="true" prefHeight="36.0" prefWidth="136.0" HBox.hgrow="ALWAYS">
+               <content>
+                  <HBox alignment="CENTER" style="-fx-background-color: #3C3C3C;">
+                     <children>
+                        <GridPane fx:id="myGridPane" alignment="CENTER" hgap="15" style="-fx-background-color: #3C3C3C;" vgap="10">
+                          <columnConstraints>
+                             <ColumnConstraints percentWidth="25" />
+                             <ColumnConstraints percentWidth="25" />
+                             <ColumnConstraints percentWidth="25" />
+                             <ColumnConstraints percentWidth="25" />
+                          </columnConstraints>
+                        </GridPane>
+                     </children>
+                  </HBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </children>
+</VBox>

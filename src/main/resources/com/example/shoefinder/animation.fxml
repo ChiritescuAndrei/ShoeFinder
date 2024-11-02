@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="VBoxAnimation" alignment="CENTER" style="-fx-background-color: #3C3C3C;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.AnimationController">
+   <children>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Circle fx:id="circle1" fill="#3c3c3c" radius="140.0" stroke="#01e9ff" strokeType="INSIDE" strokeWidth="15.0" style="-fx-stroke-dash-array: 50;" />
+            <Circle fx:id="circle2" fill="#3c3c3c" radius="70.0" stroke="#ff009a" strokeType="INSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 50;" />
+         </children>
+      </StackPane>
+      <Label text="Searching" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin></Label>
+   </children>
+</VBox>
